@@ -6,7 +6,12 @@ public class Main {
 
         ArrayList <GeometricObject> go = new ArrayList<>();
 
-        go.add(new Circle(5));
+        GeometricObject thing1 = new Circle(10, "Circle One");
+
+        go.add(thing1);
+        go.add(new Circle(5, "Circle Two"));
+        go.add(new Rectangle(3, 3, "Rectangle One"));
+        go.add(new Triangle("Triangle One"));
 
         for (int i = 0; i < go.size(); i++){
 
@@ -14,6 +19,11 @@ public class Main {
             System.out.println(thingy);
             System.out.println(thingy.getArea());
             System.out.println(thingy.getPerimeter());
+
+            if (thingy instanceof Circle){
+
+                ((Circle) thingy).getDiameter();
+            }
 
         }
     }

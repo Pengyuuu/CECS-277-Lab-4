@@ -6,11 +6,13 @@ public class Circle extends GeometricObject {
 
     public Circle(){
 
+        super();
         radius = 1;
     }
 
-    public Circle(int r){
+    public Circle(int r, String name){
 
+        super(name);
         radius = r;
     }
 
@@ -29,8 +31,16 @@ public class Circle extends GeometricObject {
         return 2 * Math.PI * radius;
     }
 
-    public int getDiameter(){
+    public void getDiameter(){
 
-        return radius * 2;
+        System.out.println(radius * 2);
     }
+
+    /**
+    @Override
+    public String toString(){
+
+        return "This is a circle: ";
+    }
+    */
 }
